@@ -6,7 +6,7 @@
  * 
  * @author Barbara Ericson 
  */
-public class PictureTester
+public class PictureTester extends Picture
 {
   /** Method to test zeroBlue */
   public static void testZeroBlue()
@@ -65,8 +65,8 @@ public class PictureTester
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    //testMirrorVertical();
-    //testMirrorTemple();
+    testMirrorVertical();
+    testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
