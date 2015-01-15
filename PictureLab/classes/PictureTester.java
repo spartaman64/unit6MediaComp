@@ -17,6 +17,22 @@ public class PictureTester extends Picture
     beach.explore();
   }
   
+  public static void testKeepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+  }
+  
+  public static void testNegate()
+  {
+      Picture beach = new Picture("beach.jpg");
+      beach.explore();
+      beach.negate();
+      beach.explore();
+    }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -51,6 +67,14 @@ public class PictureTester extends Picture
     swan.explore();
   }
   
+  public static void testMirrorArms()
+  {
+      Picture snowman = new Picture("snowman.jpg");
+      snowman.mirrorArms();
+      snowman.explore();
+    }
+  
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -58,6 +82,7 @@ public class PictureTester extends Picture
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+    testNegate();
     testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
@@ -80,5 +105,6 @@ public class PictureTester extends Picture
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
+    testMirrorArms();
   }
 }
