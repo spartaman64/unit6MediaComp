@@ -17,6 +17,22 @@ public class PictureTester extends Picture
     beach.explore();
   }
   
+  public static void testFixUnderwater()
+  {
+      Picture water = new Picture("water.jpg");
+      water.explore();
+      water.fixUnderwater();
+      water.explore();
+    }
+  
+  public static void testGrayscale()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
+    }
+  
   public static void testKeepOnlyBlue()
   {
     Picture beach = new Picture("beach.jpg");
@@ -82,6 +98,8 @@ public class PictureTester extends Picture
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+    testGrayscale();
+    testFixUnderwater();
     testNegate();
     testZeroBlue();
     //testKeepOnlyBlue();
