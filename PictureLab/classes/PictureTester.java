@@ -17,6 +17,27 @@ public class PictureTester extends Picture
     beach.explore();
   }
   
+  public static void collage()
+  {
+      Picture canvas = new Picture(1080, 1920);
+      Picture linusLinux = new Picture("linusVSnvidia.jpg");
+      Picture linusLinux2 = new Picture("linusVSnvidia.jpg");
+      canvas.copy(linusLinux,0,0);
+      linusLinux.grayscale();
+      canvas.copy(linusLinux,0,404);
+      linusLinux.keepOnlyRed();
+      canvas.copy(linusLinux,200,404);
+      linusLinux2.keepOnlyBlue();
+      canvas.copy(linusLinux2,200,0);     
+      linusLinux2.mirrorHorizontal();
+      canvas.copy(linusLinux2,400,0);
+      linusLinux.mirrorVertical();
+      canvas.copy(linusLinux,400,404);
+      linusLinux.explore();
+      linusLinux2.explore();
+      canvas.explore();
+    }
+  
   public static void testFixUnderwater()
   {
       Picture water = new Picture("water.jpg");
@@ -98,6 +119,7 @@ public class PictureTester extends Picture
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+    collage();
     testGrayscale();
     testFixUnderwater();
     testNegate();

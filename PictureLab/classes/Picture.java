@@ -110,6 +110,18 @@ public class Picture extends SimplePicture
       }
     }   
     }
+  public void keepOnlyRed()
+  {
+   Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setBlue(0);
+        pixelObj.setGreen(0);
+      }
+    }   
+    }
     
   public void negate()
   {
@@ -377,4 +389,6 @@ public class Picture extends SimplePicture
       }
     }
     }
+    
+  
 } // this } is the end of class Picture, put all new methods before this
