@@ -22,6 +22,7 @@ public class PictureTester extends Picture
       Picture canvas = new Picture(1080, 1920);
       Picture linusLinux = new Picture("linusVSnvidia.jpg");
       Picture linusLinux2 = new Picture("linusVSnvidia.jpg");
+      Picture linusTechGPU = new Picture("linusGPU.jpg");
       canvas.copy(linusLinux,0,0);
       linusLinux.grayscale();
       canvas.copy(linusLinux,0,404);
@@ -33,8 +34,9 @@ public class PictureTester extends Picture
       canvas.copy(linusLinux2,400,0);
       linusLinux.mirrorVertical();
       canvas.copy(linusLinux,400,404);
-      linusLinux.explore();
-      linusLinux2.explore();
+      canvas.copy(linusTechGPU,600,0);
+      linusTechGPU.mirrorVertical();
+      canvas.copy(linusTechGPU,600,253);     
       canvas.explore();
     }
   
